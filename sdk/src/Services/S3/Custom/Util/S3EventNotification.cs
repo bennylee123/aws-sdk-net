@@ -370,6 +370,8 @@ namespace Amazon.S3.Util
             {
                 if (data[key].IsInt)
                     return (int)data[key];
+                else if (data[key].IsUInt)
+                    return (long) (uint) data[key];
                 else
                     return (long)data[key];
             }
